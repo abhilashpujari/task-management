@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Project from '@/components/Project';
+import ProjectView from '@/components/Project/View/ProjectView';
 
 Vue.use(Router);
 
@@ -8,8 +8,8 @@ export default new Router({
   routes: [
     {
       path: '/project',
-      name: 'Project',
-      component: Project,
+      name: 'ProjectView',
+      component: ProjectView,
     },
   ],
 });

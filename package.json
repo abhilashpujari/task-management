@@ -11,7 +11,14 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.5.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-brands-svg-icons": "^5.15.1",
+    "@fortawesome/free-regular-svg-icons": "^5.15.1",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/vue-fontawesome": "^2.0.0",
+    "bootstrap": "^4.5.3",
+    "bootstrap-vue": "^2.19.0",
+    "vue": "^2.6.12",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
