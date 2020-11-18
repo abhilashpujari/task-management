@@ -12,15 +12,21 @@
                         <div class="flex">
                             <button
                                 class="ml-3 flex items-center justify-between text-sm font-medium text-white bg-gray-800 hover:bg-gray-700 px-4 py-2 rounded-md"
+                                @click.prevent="modal.createTask.show = true"
                             >
                                 <font-awesome-icon class="mr-2" icon="plus"/>
-                                <span class="text-sm text-gray-200">New Issue</span>
+                                <span class="text-sm text-gray-200">
+                                    New Issue
+                                </span>
                             </button>
                         </div>
                     </div>
                 </header>
             </div>
             <task-list/>
+            <modal-create-task
+                :show="modal.createTask.show"
+                @close="modal.createTask.show = false"/>
         </div>
     </div>
 
@@ -28,14 +34,21 @@
 
 <script>
     import TaskList from '../../Task/List/TaskList';
+    import ModalCreateTask from '../../Task/List/Partials/ModalCreateTask';
 
     export default {
         name: 'ProjectView',
         components: {
+            ModalCreateTask,
             TaskList
         },
         data() {
             return {
+                modal: {
+                    createTask: {
+                        show: false
+                    }
+                },
                 breadcrumb: [
                     {
                         text: 'Dasboard',
