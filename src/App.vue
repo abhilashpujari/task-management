@@ -10,3 +10,9 @@ export default {
 };
 </script>
 
+<style>
+    .breadcrumb {
+        background-color: transparent;
+    }
+</style>
+

@@ -1,6 +1,7 @@
 <template>
     <div>
         <div class="flex-1 min-w-0 flex flex-col bg-white">
+            <b-breadcrumb :items="breadcrumb"/>
             <div class="flex-shrink-0 border-b-2 border-gray-200">
                 <header class="px-6">
                     <div class="flex items-center justify-between py-2">
@@ -32,6 +33,20 @@
         name: 'ProjectView',
         components: {
             TaskList
+        },
+        data() {
+            return {
+                breadcrumb: [
+                    {
+                        text: 'Dasboard',
+                        href: '#'
+                    },
+                    {
+                        text: 'Project',
+                        active: true
+                    }
+                ]
+            };
         }
     };
 </script>
